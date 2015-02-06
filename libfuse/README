@@ -1,0 +1,1 @@
+add "#include <pthread.h>" to fuse_i.h

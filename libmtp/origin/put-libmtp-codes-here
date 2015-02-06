@@ -1,0 +1,113 @@
+libmtp
+├── Android.mk
+├── config
+│   └── config.h
+└── origin
+    ├── aclocal.m4
+    ├── AUTHORS
+    ├── ChangeLog
+    ├── config.guess
+    ├── config.h.in
+    ├── config.rpath
+    ├── config.sub
+    ├── configure
+    ├── configure.ac
+    ├── COPYING
+    ├── depcomp
+    ├── doc
+    │   ├── Doxyfile.in
+    │   ├── examples.h
+    │   ├── mainpage.h
+    │   ├── Makefile.am
+    │   └── Makefile.in
+    ├── examples
+    │   ├── albumart.c
+    │   ├── albums.c
+    │   ├── common.h
+    │   ├── connect.c
+    │   ├── connect.h
+    │   ├── delfile.c
+    │   ├── detect.c
+    │   ├── emptyfolders.c
+    │   ├── evolution-sync.sh
+    │   ├── files.c
+    │   ├── filetree.c
+    │   ├── folders.c
+    │   ├── format.c
+    │   ├── getfile.c
+    │   ├── getplaylist.c
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── newfolder.c
+    │   ├── newplaylist.c
+    │   ├── pathutils.c
+    │   ├── pathutils.h
+    │   ├── playlists.c
+    │   ├── reset.c
+    │   ├── sendfile.c
+    │   ├── sendtr.c
+    │   ├── thumb.c
+    │   ├── tracks.c
+    │   ├── trexist.c
+    │   ├── util.c
+    │   └── util.h
+    ├── hotplug.sh.in
+    ├── INSTALL
+    ├── install-sh
+    ├── libmtp.pc
+    ├── libmtp.pc.in
+    ├── libmtp.sh
+    ├── libmtp.sh.in
+    ├── ltmain.sh
+    ├── m4
+    │   ├── byteorder.m4
+    │   ├── iconv.m4
+    │   ├── libtool.m4
+    │   ├── lt~obsolete.m4
+    │   ├── ltoptions.m4
+    │   ├── ltsugar.m4
+    │   ├── ltversion.m4
+    │   └── stdint.m4
+    ├── Makefile.am
+    ├── Makefile.in
+    ├── missing
+    ├── put-libmtp-codes-here
+    ├── README
+    ├── README.windows.txt
+    ├── src
+    │   ├── chdk_live_view.h
+    │   ├── chdk_ptp.h
+    │   ├── device-flags.h
+    │   ├── gphoto2-endian.h
+    │   ├── libmtp.c
+    │   ├── libmtp.h
+    │   ├── libmtp.h.in
+    │   ├── libmtp.sym
+    │   ├── libopenusb1-glue.c
+    │   ├── libusb1-glue.c
+    │   ├── libusb-glue.c
+    │   ├── libusb-glue.h
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── mtpz.c
+    │   ├── mtpz.h
+    │   ├── music-players.h
+    │   ├── playlist-spl.c
+    │   ├── playlist-spl.h
+    │   ├── ptp.c
+    │   ├── ptp.h
+    │   ├── ptp-pack.c
+    │   ├── README
+    │   ├── _stdint.h
+    │   ├── unicode.c
+    │   ├── unicode.h
+    │   ├── util.c
+    │   └── util.h
+    ├── TODO
+    └── util
+        ├── Makefile.am
+        ├── Makefile.in
+        ├── mtp-hotplug.c
+        └── mtp-probe.c
+
+7 directories, 103 files

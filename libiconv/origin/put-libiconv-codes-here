@@ -1,0 +1,921 @@
+libiconv/
+├── Android.mk
+├── config
+│   ├── config.h
+│   ├── configmake.h
+│   └── langinfo.h
+├── include
+│   └── iconv.h
+└── origin
+    ├── ABOUT-NLS
+    ├── aclocal.m4
+    ├── AUTHORS
+    ├── autogen.sh
+    ├── build-aux
+    │   ├── config.guess
+    │   ├── config.libpath
+    │   ├── config.rpath
+    │   ├── config.sub
+    │   ├── install-reloc
+    │   ├── install-sh
+    │   ├── ltmain.sh
+    │   ├── missing
+    │   ├── mkinstalldirs
+    │   ├── reloc-ldflags
+    │   └── snippet
+    │       ├── arg-nonnull.h
+    │       ├── c++defs.h
+    │       ├── _Noreturn.h
+    │       └── warn-on-use.h
+    ├── ChangeLog
+    ├── config.h.in
+    ├── configure
+    ├── configure.ac
+    ├── COPYING
+    ├── COPYING.LIB
+    ├── DEPENDENCIES
+    ├── DESIGN
+    ├── djgpp
+    │   ├── config.bat
+    │   ├── config.sed
+    │   ├── config.site
+    │   ├── edtest.bat
+    │   ├── fnchange.in
+    │   ├── fnchange.lst
+    │   ├── Makefile.maint
+    │   ├── makefile.sed
+    │   ├── README
+    │   ├── README.in
+    │   ├── sources.sed
+    │   ├── stateful-check.sed
+    │   ├── stateless-check.sed
+    │   └── translit-check.sed
+    ├── doc
+    │   └── relocatable.texi
+    ├── extras
+    │   ├── ChangeLog
+    │   ├── iconv_string.c
+    │   └── iconv_string.h
+    ├── gnulib-local
+    │   ├── lib
+    │   │   ├── alloca.in.h
+    │   │   ├── error.h.diff
+    │   │   ├── progname.h.diff
+    │   │   ├── xalloc.h
+    │   │   ├── xmalloc.c
+    │   │   └── xstrdup.c
+    │   ├── m4
+    │   │   └── alloca.m4
+    │   └── modules
+    │       ├── libiconv-misc
+    │       ├── mbstate
+    │       └── xalloc
+    ├── HACKING
+    ├── include
+    │   ├── export.h
+    │   ├── iconv.h.build.in
+    │   └── iconv.h.in
+    ├── INSTALL.generic
+    ├── lib
+    │   ├── aliases2.h
+    │   ├── aliases_aix.h
+    │   ├── aliases_aix_sysaix.h
+    │   ├── aliases_dos.h
+    │   ├── aliases_extra.h
+    │   ├── aliases.gperf
+    │   ├── aliases.h
+    │   ├── aliases_osf1.h
+    │   ├── aliases_osf1_sysosf1.h
+    │   ├── aliases_sysaix.gperf
+    │   ├── aliases_sysaix.h
+    │   ├── aliases_syshpux.gperf
+    │   ├── aliases_syshpux.h
+    │   ├── aliases_sysosf1.gperf
+    │   ├── aliases_sysosf1.h
+    │   ├── aliases_syssolaris.gperf
+    │   ├── aliases_syssolaris.h
+    │   ├── armscii_8.h
+    │   ├── ascii.h
+    │   ├── atarist.h
+    │   ├── big5_2003.h
+    │   ├── big5.h
+    │   ├── big5hkscs1999.h
+    │   ├── big5hkscs2001.h
+    │   ├── big5hkscs2004.h
+    │   ├── big5hkscs2008.h
+    │   ├── c99.h
+    │   ├── canonical_aix.h
+    │   ├── canonical_aix_sysaix.h
+    │   ├── canonical_dos.h
+    │   ├── canonical_extra.h
+    │   ├── canonical.h
+    │   ├── canonical_local.h
+    │   ├── canonical_local_sysaix.h
+    │   ├── canonical_local_syshpux.h
+    │   ├── canonical_local_sysosf1.h
+    │   ├── canonical_local_syssolaris.h
+    │   ├── canonical_osf1.h
+    │   ├── canonical_osf1_sysosf1.h
+    │   ├── canonical_sysaix.h
+    │   ├── canonical_syshpux.h
+    │   ├── canonical_sysosf1.h
+    │   ├── canonical_syssolaris.h
+    │   ├── ces_big5.h
+    │   ├── ces_gbk.h
+    │   ├── cjk_variants.h
+    │   ├── cns11643_15.h
+    │   ├── cns11643_1.h
+    │   ├── cns11643_2.h
+    │   ├── cns11643_3.h
+    │   ├── cns11643_4a.h
+    │   ├── cns11643_4b.h
+    │   ├── cns11643_4.h
+    │   ├── cns11643_5.h
+    │   ├── cns11643_6.h
+    │   ├── cns11643_7.h
+    │   ├── cns11643.h
+    │   ├── cns11643_inv.h
+    │   ├── config.h.in
+    │   ├── converters.h
+    │   ├── cp1046.h
+    │   ├── cp1124.h
+    │   ├── cp1125.h
+    │   ├── cp1129.h
+    │   ├── cp1131.h
+    │   ├── cp1133.h
+    │   ├── cp1161.h
+    │   ├── cp1162.h
+    │   ├── cp1163.h
+    │   ├── cp1250.h
+    │   ├── cp1251.h
+    │   ├── cp1252.h
+    │   ├── cp1253.h
+    │   ├── cp1254.h
+    │   ├── cp1255.h
+    │   ├── cp1256.h
+    │   ├── cp1257.h
+    │   ├── cp1258.h
+    │   ├── cp437.h
+    │   ├── cp737.h
+    │   ├── cp775.h
+    │   ├── cp850.h
+    │   ├── cp852.h
+    │   ├── cp853.h
+    │   ├── cp855.h
+    │   ├── cp856.h
+    │   ├── cp857.h
+    │   ├── cp858.h
+    │   ├── cp860.h
+    │   ├── cp861.h
+    │   ├── cp862.h
+    │   ├── cp863.h
+    │   ├── cp864.h
+    │   ├── cp865.h
+    │   ├── cp866.h
+    │   ├── cp869.h
+    │   ├── cp874.h
+    │   ├── cp922.h
+    │   ├── cp932ext.h
+    │   ├── cp932.h
+    │   ├── cp936ext.h
+    │   ├── cp936.h
+    │   ├── cp943.h
+    │   ├── cp949.h
+    │   ├── cp950ext.h
+    │   ├── cp950.h
+    │   ├── dec_hanyu.h
+    │   ├── dec_kanji.h
+    │   ├── encodings_aix.def
+    │   ├── encodings.def
+    │   ├── encodings_dos.def
+    │   ├── encodings_extra.def
+    │   ├── encodings_local.def
+    │   ├── encodings_osf1.def
+    │   ├── euc_cn.h
+    │   ├── euc_jisx0213.h
+    │   ├── euc_jp.h
+    │   ├── euc_kr.h
+    │   ├── euc_tw.h
+    │   ├── flags.h
+    │   ├── flushwc.h
+    │   ├── gb12345ext.h
+    │   ├── gb12345.h
+    │   ├── gb18030ext.h
+    │   ├── gb18030.h
+    │   ├── gb18030uni.h
+    │   ├── gb2312.h
+    │   ├── gbkext1.h
+    │   ├── gbkext2.h
+    │   ├── gbkext_inv.h
+    │   ├── gbk.h
+    │   ├── genaliases2.c
+    │   ├── genaliases.c
+    │   ├── genflags.c
+    │   ├── gentranslit.c
+    │   ├── georgian_academy.h
+    │   ├── georgian_ps.h
+    │   ├── hkscs1999.h
+    │   ├── hkscs2001.h
+    │   ├── hkscs2004.h
+    │   ├── hkscs2008.h
+    │   ├── hp_roman8.h
+    │   ├── hz.h
+    │   ├── iconv.c
+    │   ├── iconv_open1.h
+    │   ├── iconv_open2.h
+    │   ├── iso2022_cnext.h
+    │   ├── iso2022_cn.h
+    │   ├── iso2022_jp1.h
+    │   ├── iso2022_jp2.h
+    │   ├── iso2022_jp3.h
+    │   ├── iso2022_jp.h
+    │   ├── iso2022_kr.h
+    │   ├── iso646_cn.h
+    │   ├── iso646_jp.h
+    │   ├── iso8859_10.h
+    │   ├── iso8859_11.h
+    │   ├── iso8859_13.h
+    │   ├── iso8859_14.h
+    │   ├── iso8859_15.h
+    │   ├── iso8859_16.h
+    │   ├── iso8859_1.h
+    │   ├── iso8859_2.h
+    │   ├── iso8859_3.h
+    │   ├── iso8859_4.h
+    │   ├── iso8859_5.h
+    │   ├── iso8859_6.h
+    │   ├── iso8859_7.h
+    │   ├── iso8859_8.h
+    │   ├── iso8859_9.h
+    │   ├── isoir165ext.h
+    │   ├── isoir165.h
+    │   ├── java.h
+    │   ├── jisx0201.h
+    │   ├── jisx0208.h
+    │   ├── jisx0212.h
+    │   ├── jisx0213.h
+    │   ├── johab.h
+    │   ├── johab_hangul.h
+    │   ├── koi8_r.h
+    │   ├── koi8_ru.h
+    │   ├── koi8_t.h
+    │   ├── koi8_u.h
+    │   ├── ksc5601.h
+    │   ├── loops.h
+    │   ├── loop_unicode.h
+    │   ├── loop_wchar.h
+    │   ├── mac_arabic.h
+    │   ├── mac_centraleurope.h
+    │   ├── mac_croatian.h
+    │   ├── mac_cyrillic.h
+    │   ├── mac_greek.h
+    │   ├── mac_hebrew.h
+    │   ├── mac_iceland.h
+    │   ├── mac_roman.h
+    │   ├── mac_romania.h
+    │   ├── mac_thai.h
+    │   ├── mac_turkish.h
+    │   ├── mac_ukraine.h
+    │   ├── Makefile.in
+    │   ├── mulelao.h
+    │   ├── nextstep.h
+    │   ├── pt154.h
+    │   ├── relocatable.c
+    │   ├── relocatable.h
+    │   ├── riscos1.h
+    │   ├── rk1048.h
+    │   ├── shift_jisx0213.h
+    │   ├── sjis.h
+    │   ├── tcvn.h
+    │   ├── tds565.h
+    │   ├── tis620.h
+    │   ├── translit.def
+    │   ├── translit.h
+    │   ├── ucs2be.h
+    │   ├── ucs2.h
+    │   ├── ucs2internal.h
+    │   ├── ucs2le.h
+    │   ├── ucs2swapped.h
+    │   ├── ucs4be.h
+    │   ├── ucs4.h
+    │   ├── ucs4internal.h
+    │   ├── ucs4le.h
+    │   ├── ucs4swapped.h
+    │   ├── uhc_1.h
+    │   ├── uhc_2.h
+    │   ├── utf16be.h
+    │   ├── utf16.h
+    │   ├── utf16le.h
+    │   ├── utf32be.h
+    │   ├── utf32.h
+    │   ├── utf32le.h
+    │   ├── utf7.h
+    │   ├── utf8.h
+    │   ├── vietcomb.h
+    │   └── viscii.h
+    ├── libcharset
+    │   ├── AUTHORS
+    │   ├── autoconf
+    │   │   └── aclocal.m4
+    │   ├── autogen.sh
+    │   ├── build-aux
+    │   │   ├── config.guess
+    │   │   ├── config.libpath
+    │   │   ├── config.sub
+    │   │   ├── install-sh
+    │   │   ├── ltmain.sh
+    │   │   └── mkinstalldirs
+    │   ├── ChangeLog
+    │   ├── config.h.in
+    │   ├── configure
+    │   ├── configure.ac
+    │   ├── COPYING.LIB
+    │   ├── DEPENDENCIES
+    │   ├── djgpp
+    │   │   ├── config.bat
+    │   │   ├── config.sed
+    │   │   ├── config.site
+    │   │   ├── fnchange.in
+    │   │   ├── fnchange.lst
+    │   │   ├── Makefile.maint
+    │   │   ├── README
+    │   │   └── README.in
+    │   ├── HACKING
+    │   ├── include
+    │   │   ├── export.h
+    │   │   ├── libcharset.h.in
+    │   │   ├── localcharset.h.build.in
+    │   │   └── localcharset.h.in
+    │   ├── INSTALL.generic
+    │   ├── INTEGRATE
+    │   ├── lib
+    │   │   ├── ChangeLog
+    │   │   ├── config.charset
+    │   │   ├── localcharset.c
+    │   │   ├── Makefile.in
+    │   │   ├── ref-add.sin
+    │   │   ├── ref-del.sin
+    │   │   ├── relocatable.c
+    │   │   └── relocatable.h
+    │   ├── m4
+    │   │   ├── codeset.m4
+    │   │   ├── fcntl-o.m4
+    │   │   ├── glibc21.m4
+    │   │   ├── libtool.m4
+    │   │   ├── lt~obsolete.m4
+    │   │   ├── ltoptions.m4
+    │   │   ├── ltsugar.m4
+    │   │   ├── ltversion.m4
+    │   │   ├── relocatable-lib.m4
+    │   │   └── visibility.m4
+    │   ├── Makefile.devel
+    │   ├── Makefile.in
+    │   ├── NEWS
+    │   ├── README
+    │   ├── README.djgpp
+    │   ├── README.woe32
+    │   └── tools
+    │       ├── aix-3.2.5
+    │       ├── aix-4.1.5
+    │       ├── aix-4.2.0
+    │       ├── aix-4.3.2
+    │       ├── all-charsets
+    │       ├── all-charsets-X11
+    │       ├── all-locales
+    │       ├── beos-5
+    │       ├── cygwin-1.7.2
+    │       ├── darwin-6.8
+    │       ├── darwin-7.5
+    │       ├── darwin-9.5
+    │       ├── freebsd-3.3
+    │       ├── glibc-2.1.3
+    │       ├── glibc-2.1.90
+    │       ├── glibc-2.2
+    │       ├── glibc-2.2-XF86-3.3.6
+    │       ├── glibc-2.2-XF86-4.0.1f
+    │       ├── hpux-10.01
+    │       ├── hpux-10.20
+    │       ├── hpux-11.00
+    │       ├── irix-6.5
+    │       ├── locale_charmap
+    │       ├── locale_charset.c
+    │       ├── locale_codeset.c
+    │       ├── locale_monthnames.c
+    │       ├── locale_x11encoding.c
+    │       ├── netbsd-3.0
+    │       ├── openbsd-4.1
+    │       ├── osf1-4.0a
+    │       ├── osf1-4.0d
+    │       ├── osf1-5.1
+    │       ├── README
+    │       ├── solaris-2.4
+    │       ├── solaris-2.5.1
+    │       ├── solaris-2.6
+    │       ├── solaris-2.6-cjk
+    │       ├── solaris-2.7
+    │       ├── sunos-4.1.4
+    │       └── win32
+    ├── m4
+    │   ├── cp.m4
+    │   ├── eilseq.m4
+    │   ├── endian.m4
+    │   ├── fcntl-o.m4
+    │   ├── general.m4
+    │   ├── libtool.m4
+    │   ├── ln.m4
+    │   ├── lt~obsolete.m4
+    │   ├── ltoptions.m4
+    │   ├── ltsugar.m4
+    │   ├── ltversion.m4
+    │   └── proto.m4
+    ├── Makefile.devel
+    ├── Makefile.in
+    ├── man
+    │   ├── iconv.1
+    │   ├── iconv.1.html
+    │   ├── iconv.3
+    │   ├── iconv.3.html
+    │   ├── iconv_close.3
+    │   ├── iconv_close.3.html
+    │   ├── iconvctl.3
+    │   ├── iconvctl.3.html
+    │   ├── iconv_open.3
+    │   ├── iconv_open.3.html
+    │   ├── iconv_open_into.3
+    │   ├── iconv_open_into.3.html
+    │   └── Makefile.in
+    ├── NEWS
+    ├── NOTES
+    ├── os2
+    │   └── iconv.def
+    ├── po
+    │   ├── af.gmo
+    │   ├── af.po
+    │   ├── bg.gmo
+    │   ├── bg.po
+    │   ├── boldquot.sed
+    │   ├── ca.gmo
+    │   ├── ca.po
+    │   ├── ChangeLog
+    │   ├── cs.gmo
+    │   ├── cs.po
+    │   ├── da.gmo
+    │   ├── da.po
+    │   ├── de.gmo
+    │   ├── de.po
+    │   ├── el.gmo
+    │   ├── el.po
+    │   ├── en@boldquot.header
+    │   ├── en@quot.header
+    │   ├── eo.gmo
+    │   ├── eo.po
+    │   ├── es.gmo
+    │   ├── es.po
+    │   ├── et.gmo
+    │   ├── et.po
+    │   ├── fi.gmo
+    │   ├── fi.po
+    │   ├── fr.gmo
+    │   ├── fr.po
+    │   ├── ga.gmo
+    │   ├── ga.po
+    │   ├── gl.gmo
+    │   ├── gl.po
+    │   ├── hr.gmo
+    │   ├── hr.po
+    │   ├── hu.gmo
+    │   ├── hu.po
+    │   ├── id.gmo
+    │   ├── id.po
+    │   ├── insert-header.sin
+    │   ├── it.gmo
+    │   ├── it.po
+    │   ├── ja.gmo
+    │   ├── ja.po
+    │   ├── libiconv.pot
+    │   ├── LINGUAS
+    │   ├── Makefile.in.in
+    │   ├── Makevars
+    │   ├── nl.gmo
+    │   ├── nl.po
+    │   ├── pl.gmo
+    │   ├── pl.po
+    │   ├── POTFILES.in
+    │   ├── pt_BR.gmo
+    │   ├── pt_BR.po
+    │   ├── quot.sed
+    │   ├── remove-potcdate.sin
+    │   ├── rm.gmo
+    │   ├── rm.po
+    │   ├── ro.gmo
+    │   ├── ro.po
+    │   ├── ru.gmo
+    │   ├── Rules-quot
+    │   ├── ru.po
+    │   ├── sk.gmo
+    │   ├── sk.po
+    │   ├── sl.gmo
+    │   ├── sl.po
+    │   ├── sq.gmo
+    │   ├── sq.po
+    │   ├── sr.gmo
+    │   ├── sr.po
+    │   ├── stamp-po
+    │   ├── sv.gmo
+    │   ├── sv.po
+    │   ├── tr.gmo
+    │   ├── tr.po
+    │   ├── uk.gmo
+    │   ├── uk.po
+    │   ├── vi.gmo
+    │   ├── vi.po
+    │   ├── wa.gmo
+    │   ├── wa.po
+    │   ├── zh_CN.gmo
+    │   ├── zh_CN.po
+    │   ├── zh_TW.gmo
+    │   └── zh_TW.po
+    ├── PORTS
+    ├── preload
+    │   ├── aclocal.m4
+    │   ├── configure
+    │   ├── configure.ac
+    │   ├── Makefile.devel
+    │   └── Makefile.in
+    ├── put-libiconv-codes-here
+    ├── README
+    ├── README.djgpp
+    ├── README.woe32
+    ├── src
+    │   ├── iconv.c
+    │   ├── iconv_no_i18n.c
+    │   └── Makefile.in
+    ├── srclib
+    │   ├── alloca.in.h
+    │   ├── allocator.c
+    │   ├── allocator.h
+    │   ├── areadlink.c
+    │   ├── areadlink.h
+    │   ├── binary-io.h
+    │   ├── canonicalize-lgpl.c
+    │   ├── careadlinkat.c
+    │   ├── careadlinkat.h
+    │   ├── c-ctype.c
+    │   ├── c-ctype.h
+    │   ├── dosname.h
+    │   ├── errno.in.h
+    │   ├── error.c
+    │   ├── error.h
+    │   ├── fcntl.in.h
+    │   ├── gettext.h
+    │   ├── intprops.h
+    │   ├── localcharset.h
+    │   ├── lstat.c
+    │   ├── Makefile.am
+    │   ├── Makefile.gnulib
+    │   ├── Makefile.in
+    │   ├── malloca.c
+    │   ├── malloca.h
+    │   ├── malloca.valgrind
+    │   ├── memmove.c
+    │   ├── pathmax.h
+    │   ├── progname.c
+    │   ├── progname.h
+    │   ├── progreloc.c
+    │   ├── read.c
+    │   ├── readlink.c
+    │   ├── relocatable.c
+    │   ├── relocatable.h
+    │   ├── relocwrapper.c
+    │   ├── safe-read.c
+    │   ├── safe-read.h
+    │   ├── setenv.c
+    │   ├── signal.in.h
+    │   ├── sigprocmask.c
+    │   ├── stat.c
+    │   ├── stdbool.in.h
+    │   ├── stddef.in.h
+    │   ├── stdint.in.h
+    │   ├── stdio.in.h
+    │   ├── stdio-write.c
+    │   ├── stdlib.in.h
+    │   ├── streq.h
+    │   ├── strerror.c
+    │   ├── strerror-override.c
+    │   ├── strerror-override.h
+    │   ├── string.in.h
+    │   ├── sys_stat.in.h
+    │   ├── time.in.h
+    │   ├── unistd.in.h
+    │   ├── unitypes.in.h
+    │   ├── uniwidth
+    │   │   ├── cjk.h
+    │   │   └── width.c
+    │   ├── uniwidth.in.h
+    │   ├── unlocked-io.h
+    │   ├── verify.h
+    │   ├── xalloc.h
+    │   ├── xmalloc.c
+    │   ├── xreadlink.c
+    │   ├── xreadlink.h
+    │   └── xstrdup.c
+    ├── srcm4
+    │   ├── 00gnulib.m4
+    │   ├── alloca.m4
+    │   ├── asm-underscore.m4
+    │   ├── canonicalize.m4
+    │   ├── codeset.m4
+    │   ├── double-slash-root.m4
+    │   ├── eealloc.m4
+    │   ├── environ.m4
+    │   ├── errno_h.m4
+    │   ├── error.m4
+    │   ├── extensions.m4
+    │   ├── fcntl_h.m4
+    │   ├── fcntl-o.m4
+    │   ├── gettext.m4
+    │   ├── glibc21.m4
+    │   ├── glibc2.m4
+    │   ├── gnulib-cache.m4
+    │   ├── gnulib-common.m4
+    │   ├── gnulib-comp.m4
+    │   ├── gnulib-tool.m4
+    │   ├── iconv.m4
+    │   ├── include_next.m4
+    │   ├── intdiv0.m4
+    │   ├── intldir.m4
+    │   ├── intl.m4
+    │   ├── intlmacosx.m4
+    │   ├── intmax.m4
+    │   ├── inttypes_h.m4
+    │   ├── inttypes-pri.m4
+    │   ├── largefile.m4
+    │   ├── lcmessage.m4
+    │   ├── lib-ld.m4
+    │   ├── lib-link.m4
+    │   ├── lib-prefix.m4
+    │   ├── libunistring-base.m4
+    │   ├── lock.m4
+    │   ├── longlong.m4
+    │   ├── lstat.m4
+    │   ├── malloca.m4
+    │   ├── mbstate_t.m4
+    │   ├── memmove.m4
+    │   ├── multiarch.m4
+    │   ├── nls.m4
+    │   ├── nocrash.m4
+    │   ├── pathmax.m4
+    │   ├── po.m4
+    │   ├── printf-posix.m4
+    │   ├── progtest.m4
+    │   ├── readlink.m4
+    │   ├── read.m4
+    │   ├── relocatable-lib.m4
+    │   ├── relocatable.m4
+    │   ├── safe-read.m4
+    │   ├── setenv.m4
+    │   ├── signalblocking.m4
+    │   ├── signal_h.m4
+    │   ├── sigpipe.m4
+    │   ├── size_max.m4
+    │   ├── ssize_t.m4
+    │   ├── stat.m4
+    │   ├── stdbool.m4
+    │   ├── stddef_h.m4
+    │   ├── stdint_h.m4
+    │   ├── stdint.m4
+    │   ├── stdio_h.m4
+    │   ├── stdlib_h.m4
+    │   ├── strerror.m4
+    │   ├── string_h.m4
+    │   ├── sys_socket_h.m4
+    │   ├── sys_stat_h.m4
+    │   ├── threadlib.m4
+    │   ├── time_h.m4
+    │   ├── uintmax_t.m4
+    │   ├── unistd_h.m4
+    │   ├── unlocked-io.m4
+    │   ├── visibility.m4
+    │   ├── warn-on-use.m4
+    │   ├── wchar_t.m4
+    │   ├── wint_t.m4
+    │   └── xsize.m4
+    ├── tests
+    │   ├── ARMSCII-8.IRREVERSIBLE.TXT
+    │   ├── ARMSCII-8.TXT
+    │   ├── ASCII.TXT
+    │   ├── ATARIST.TXT
+    │   ├── BIG5-2003.IRREVERSIBLE.TXT
+    │   ├── BIG5-2003.TXT
+    │   ├── BIG5-HKSCS-1999.IRREVERSIBLE.TXT
+    │   ├── BIG5-HKSCS-1999-snippet
+    │   ├── BIG5-HKSCS-1999-snippet.UTF-8
+    │   ├── BIG5-HKSCS-1999.TXT
+    │   ├── BIG5-HKSCS-2001.IRREVERSIBLE.TXT
+    │   ├── BIG5-HKSCS-2001-snippet
+    │   ├── BIG5-HKSCS-2001-snippet.UTF-8
+    │   ├── BIG5-HKSCS-2001.TXT
+    │   ├── BIG5-HKSCS-2004.IRREVERSIBLE.TXT
+    │   ├── BIG5-HKSCS-2004-snippet
+    │   ├── BIG5-HKSCS-2004-snippet.UTF-8
+    │   ├── BIG5-HKSCS-2004.TXT
+    │   ├── BIG5-HKSCS-2008.IRREVERSIBLE.TXT
+    │   ├── BIG5-HKSCS-2008-snippet
+    │   ├── BIG5-HKSCS-2008-snippet.UTF-8
+    │   ├── BIG5-HKSCS-2008.TXT
+    │   ├── BIG5.TXT
+    │   ├── check-stateful
+    │   ├── check-stateful.bat
+    │   ├── check-stateless
+    │   ├── check-stateless.bat
+    │   ├── check-subst
+    │   ├── check-translit
+    │   ├── check-translit.bat
+    │   ├── check-translitfailure
+    │   ├── CP1046.TXT
+    │   ├── CP1124.TXT
+    │   ├── CP1125.TXT
+    │   ├── CP1129.TXT
+    │   ├── CP1131.TXT
+    │   ├── CP1133.TXT
+    │   ├── CP1161.IRREVERSIBLE.TXT
+    │   ├── CP1161.TXT
+    │   ├── CP1162.TXT
+    │   ├── CP1163.IRREVERSIBLE.TXT
+    │   ├── CP1163.TXT
+    │   ├── CP1250.TXT
+    │   ├── CP1251.TXT
+    │   ├── CP1252.TXT
+    │   ├── CP1253.TXT
+    │   ├── CP1254.TXT
+    │   ├── CP1255.IRREVERSIBLE.TXT
+    │   ├── CP1255-snippet
+    │   ├── CP1255-snippet.UTF-8
+    │   ├── CP1255.TXT
+    │   ├── CP1256.TXT
+    │   ├── CP1257.TXT
+    │   ├── CP1258.IRREVERSIBLE.TXT
+    │   ├── CP1258-snippet
+    │   ├── CP1258-snippet.UTF-8
+    │   ├── CP1258.TXT
+    │   ├── CP437.TXT
+    │   ├── CP737.TXT
+    │   ├── CP775.TXT
+    │   ├── CP850.TXT
+    │   ├── CP852.TXT
+    │   ├── CP853.TXT
+    │   ├── CP855.TXT
+    │   ├── CP856.TXT
+    │   ├── CP857.TXT
+    │   ├── CP858.TXT
+    │   ├── CP860.TXT
+    │   ├── CP861.TXT
+    │   ├── CP862.TXT
+    │   ├── CP863.TXT
+    │   ├── CP864.TXT
+    │   ├── CP865.TXT
+    │   ├── CP866.TXT
+    │   ├── CP869.TXT
+    │   ├── CP874.TXT
+    │   ├── CP922.TXT
+    │   ├── CP932.IRREVERSIBLE.TXT
+    │   ├── CP932.TXT
+    │   ├── CP936.TXT
+    │   ├── CP949.TXT
+    │   ├── CP950.IRREVERSIBLE.TXT
+    │   ├── CP950.TXT
+    │   ├── DEC-HANYU.IRREVERSIBLE.TXT
+    │   ├── DEC-HANYU.TXT
+    │   ├── DEC-KANJI.TXT
+    │   ├── EUC-CN.TXT
+    │   ├── EUC-JISX0213.TXT
+    │   ├── EUC-JP.IRREVERSIBLE.TXT
+    │   ├── EUC-JP.TXT
+    │   ├── EUC-KR.TXT
+    │   ├── EUC-TW.IRREVERSIBLE.TXT
+    │   ├── EUC-TW.TXT
+    │   ├── GB18030-BMP.TXT
+    │   ├── GB18030.IRREVERSIBLE.TXT
+    │   ├── GBK.TXT
+    │   ├── gengb18030z.c
+    │   ├── genutf8.c
+    │   ├── Georgian-Academy.TXT
+    │   ├── Georgian-PS.TXT
+    │   ├── HP-ROMAN8.TXT
+    │   ├── HZ-snippet
+    │   ├── HZ-snippet.UTF-8
+    │   ├── ISO-2022-CN-EXT-snippet
+    │   ├── ISO-2022-CN-EXT-snippet.UTF-8
+    │   ├── ISO-2022-CN-snippet
+    │   ├── ISO-2022-CN-snippet.UTF-8
+    │   ├── ISO-2022-JP-1-snippet
+    │   ├── ISO-2022-JP-1-snippet.UTF-8
+    │   ├── ISO-2022-JP-2-snippet
+    │   ├── ISO-2022-JP-2-snippet.UTF-8
+    │   ├── ISO-2022-JP-3-snippet
+    │   ├── ISO-2022-JP-3-snippet.UTF-8
+    │   ├── ISO-2022-JP-snippet
+    │   ├── ISO-2022-JP-snippet.UTF-8
+    │   ├── ISO-2022-KR-snippet
+    │   ├── ISO-2022-KR-snippet.UTF-8
+    │   ├── ISO646-CN.TXT
+    │   ├── ISO646-JP.TXT
+    │   ├── ISO-8859-10.TXT
+    │   ├── ISO-8859-11.TXT
+    │   ├── ISO-8859-13.TXT
+    │   ├── ISO-8859-14.TXT
+    │   ├── ISO-8859-15.TXT
+    │   ├── ISO-8859-16.TXT
+    │   ├── ISO-8859-1.TXT
+    │   ├── ISO-8859-2.TXT
+    │   ├── ISO-8859-3.TXT
+    │   ├── ISO-8859-4.TXT
+    │   ├── ISO-8859-5.TXT
+    │   ├── ISO-8859-6.TXT
+    │   ├── ISO-8859-7.TXT
+    │   ├── ISO-8859-8.TXT
+    │   ├── ISO-8859-9.TXT
+    │   ├── ISO-IR-165.IRREVERSIBLE.TXT
+    │   ├── ISO-IR-165.TXT
+    │   ├── JIS_X0201.TXT
+    │   ├── JOHAB.TXT
+    │   ├── KOI8-R.TXT
+    │   ├── KOI8-RU.TXT
+    │   ├── KOI8-T.TXT
+    │   ├── KOI8-U.TXT
+    │   ├── MacArabic.TXT
+    │   ├── MacCentralEurope.TXT
+    │   ├── MacCroatian.TXT
+    │   ├── MacCyrillic.TXT
+    │   ├── MacGreek.TXT
+    │   ├── MacHebrew.TXT
+    │   ├── MacIceland.TXT
+    │   ├── MacRomania.TXT
+    │   ├── MacRoman.TXT
+    │   ├── MacThai.TXT
+    │   ├── MacTurkish.TXT
+    │   ├── MacUkraine.TXT
+    │   ├── Makefile.in
+    │   ├── MuleLao-1.TXT
+    │   ├── NEXTSTEP.TXT
+    │   ├── PT154.TXT
+    │   ├── Quotes.ASCII
+    │   ├── Quotes.ISO-8859-1
+    │   ├── Quotes.UTF-8
+    │   ├── RISCOS-LATIN1.TXT
+    │   ├── RK1048.TXT
+    │   ├── SHIFT_JIS.TXT
+    │   ├── SHIFT_JISX0213.TXT
+    │   ├── table-from.c
+    │   ├── table-to.c
+    │   ├── TCVN.IRREVERSIBLE.TXT
+    │   ├── TCVN-snippet
+    │   ├── TCVN-snippet.UTF-8
+    │   ├── TCVN.TXT
+    │   ├── TDS565.TXT
+    │   ├── test-shiftseq.c
+    │   ├── test-to-wchar.c
+    │   ├── TIS-620.TXT
+    │   ├── Translit1.ASCII
+    │   ├── Translit1.ISO-8859-1
+    │   ├── TranslitFail1.ISO-8859-1
+    │   ├── UCS-2BE-snippet
+    │   ├── UCS-2BE-snippet.UTF-8
+    │   ├── UCS-2LE-snippet
+    │   ├── UCS-2LE-snippet.UTF-8
+    │   ├── UCS-4BE-snippet
+    │   ├── UCS-4BE-snippet.UTF-8
+    │   ├── UCS-4LE-snippet
+    │   ├── UCS-4LE-snippet.UTF-8
+    │   ├── uniq-u.c
+    │   ├── UTF-16BE-snippet
+    │   ├── UTF-16BE-snippet.UTF-8
+    │   ├── UTF-16LE-snippet
+    │   ├── UTF-16LE-snippet.UTF-8
+    │   ├── UTF-16-snippet
+    │   ├── UTF-16-snippet.UTF-8
+    │   ├── UTF-32BE-snippet
+    │   ├── UTF-32BE-snippet.UTF-8
+    │   ├── UTF-32LE-snippet
+    │   ├── UTF-32LE-snippet.UTF-8
+    │   ├── UTF-32-snippet
+    │   ├── UTF-32-snippet.UTF-8
+    │   ├── UTF-7-snippet
+    │   ├── UTF-7-snippet.UTF-8
+    │   └── VISCII.TXT
+    ├── THANKS
+    ├── tools
+    │   ├── 8bit_tab_to_h.c
+    │   ├── cjk_tab_to_h.c
+    │   ├── cjk_variants.c
+    │   ├── JISX0213.TXT
+    │   └── Makefile
+    ├── windows
+    │   ├── iconv.rc
+    │   ├── libiconv.rc
+    │   └── windres-options
+    └── woe32dll
+        ├── export.h
+        └── iconv-exports.c
+
+35 directories, 883 files

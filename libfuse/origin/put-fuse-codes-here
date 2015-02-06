@@ -1,0 +1,118 @@
+libfuse
+├── androidglue
+│   ├── include
+│   │   ├── androidglue.h
+│   │   └── sys
+│   │       └── statvfs.h
+│   └── statvfs.c
+├── Android.mk
+├── config
+│   └── config.h
+└── origin
+    ├── aclocal.m4
+    ├── AUTHORS
+    ├── ChangeLog
+    ├── compile
+    ├── config.guess
+    ├── config.rpath
+    ├── config.sub
+    ├── configure
+    ├── configure.ac
+    ├── COPYING
+    ├── COPYING.LIB
+    ├── depcomp
+    ├── doc
+    │   ├── Doxyfile
+    │   ├── fusermount.1
+    │   ├── how-fuse-works
+    │   ├── kernel.txt
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── mount.fuse.8
+    │   └── ulockmgr_server.1
+    ├── example
+    │   ├── cusexmp.c
+    │   ├── fioc.c
+    │   ├── fioc.h
+    │   ├── fioclient.c
+    │   ├── fsel.c
+    │   ├── fselclient.c
+    │   ├── fusexmp.c
+    │   ├── fusexmp_fh.c
+    │   ├── hello.c
+    │   ├── hello_ll.c
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   └── null.c
+    ├── FAQ
+    ├── Filesystems
+    ├── fuse.pc.in
+    ├── include
+    │   ├── config.h.in
+    │   ├── cuse_lowlevel.h
+    │   ├── fuse_common_compat.h
+    │   ├── fuse_common.h
+    │   ├── fuse_compat.h
+    │   ├── fuse.h
+    │   ├── fuse_kernel.h
+    │   ├── fuse_lowlevel_compat.h
+    │   ├── fuse_lowlevel.h
+    │   ├── fuse_opt.h
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── old
+    │   │   └── fuse.h
+    │   └── ulockmgr.h
+    ├── INSTALL
+    ├── install-sh
+    ├── lib
+    │   ├── buffer.c
+    │   ├── cuse_lowlevel.c
+    │   ├── fuse.c
+    │   ├── fuse_i.h
+    │   ├── fuse_kern_chan.c
+    │   ├── fuse_loop.c
+    │   ├── fuse_loop_mt.c
+    │   ├── fuse_lowlevel.c
+    │   ├── fuse_misc.h
+    │   ├── fuse_mt.c
+    │   ├── fuse_opt.c
+    │   ├── fuse_session.c
+    │   ├── fuse_signals.c
+    │   ├── fuse_versionscript
+    │   ├── helper.c
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── modules
+    │   │   ├── iconv.c
+    │   │   └── subdir.c
+    │   ├── mount_bsd.c
+    │   ├── mount.c
+    │   ├── mount_util.c
+    │   ├── mount_util.h
+    │   └── ulockmgr.c
+    ├── ltmain.sh
+    ├── m4
+    │   ├── libtool.m4
+    │   ├── lt~obsolete.m4
+    │   ├── ltoptions.m4
+    │   ├── ltsugar.m4
+    │   └── ltversion.m4
+    ├── Makefile.am
+    ├── Makefile.in
+    ├── missing
+    ├── NEWS
+    ├── README
+    ├── README.NFS
+    ├── tree.log
+    └── util
+        ├── fusermount.c
+        ├── init_script
+        ├── Makefile.am
+        ├── Makefile.in
+        ├── mount.fuse.c
+        ├── mount_util.c
+        ├── udev.rules
+        └── ulockmgr_server.c
+
+13 directories, 102 files

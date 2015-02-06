@@ -1,0 +1,23 @@
+mtpfs
+├── Android.mk
+├── config.h
+├── COPYING.glib
+├── glib.h
+├── glib-lite.c
+└── origin
+    ├── AUTHORS
+    ├── autogen.sh
+    ├── ChangeLog
+    ├── configure.ac
+    ├── COPYING
+    ├── id3read.c
+    ├── id3read.h
+    ├── INSTALL
+    ├── Makefile.am
+    ├── mtpfs.c
+    ├── mtpfs.h
+    ├── NEWS
+    ├── put-mtpfs-codes-here
+    └── README
+
+1 directory, 19 files
